@@ -9,5 +9,10 @@
 <body>
     <h1>Hello world</h1>
     <p>Here is our custom html template using second method.</p>
+    <ul>
+        {% for lead in leads %}
+        <li>{{ lead }}</li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
