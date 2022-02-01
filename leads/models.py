@@ -1,11 +1,9 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 
+
 class User(AbstractUser):
     pass
-
-    def __str__(self):
-        return self.email
 
 
 class Lead(models.Model):
@@ -17,10 +15,8 @@ class Lead(models.Model):
     def __str__(self):
         return f"{self.first_name} {self.last_name}"
 
-
 class Agent(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
 
     def __str__(self):
-        return self.user.username
-
+        return self.user.email

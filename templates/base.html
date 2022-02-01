@@ -2,19 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRM App with Django</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>DJCRM</title>
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="max-w-7xl mx-auto">
-        {% include "navbar.html" %}
+        {% include 'navbar.html' %}
         {% block content %}
-
-        {% endblock %}
-        {% include "scripts.html" %}
+        {% endblock content %}
     </div>
-    
+    {% include "scripts.html" %}
 </body>
 </html>
