@@ -5,6 +5,7 @@ from .models import Lead
 
 User = get_user_model()
 
+
 class LeadModelForm(forms.ModelForm):
     class Meta:
         model = Lead
@@ -27,3 +28,4 @@ class CustomUserCreationForm(UserCreationForm):
         model = User
         fields = ("username",)
         field_classes = {'username': UsernameField}
+
